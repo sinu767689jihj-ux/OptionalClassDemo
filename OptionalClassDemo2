@@ -1,0 +1,25 @@
+import java.util.Optional;
+public class OptionalDemo1 {
+    public Optional<String> getString()
+    {
+        //return Optional.empty();
+        //String s="Srinu";
+        //if(s!=null)
+        String s=null;
+             return Optional.ofNullable(s);
+    }
+    public static void main(String[] args)
+    {
+        OptionalDemo1 demo=new OptionalDemo1();
+        //orElse() Method return value is present,otherwise returns other
+        //ofNullable():Returns an optional describing the spefied value if non-null, or an empty optional if null
+        //System.out.println(demo.getString().orElse("Default Value"));
+        Optional<String> value=demo.getString();
+        if(value.isPresent())//isPresent():Checking the value is present or not in the Container
+            //System.out.println(value.get().orElse("Default Value").toUpperCase());
+            //Rules
+            //=>Never use get() and orElse() at a time
+            //either use get() or orElse()
+            System.out.println(value.get().toUpperCase());
+    }
+}
