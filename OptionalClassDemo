@@ -1,0 +1,24 @@
+import java.util.Optional;
+import java.util.LinkedList;
+public class OptionalClassDemo {                               
+    public static void main(String[] args)
+    {
+        //Optional<String> optionalString=Optional.of(null);
+        Optional<String> optionalString=Optional.of("Srinu");
+        Optional<Integer> optionalInteger=Optional.of(10);
+        Optional<Double> optionalDouble=Optional.of(29.0);
+        Optional<Character> optionalCharacter=Optional.of('S');
+        Optional<Boolean> optionalBoolean=Optional.of(true);
+        LinkedList<String> list=new LinkedList<>();
+        list.add("Srinu");
+        list.add("Kumar");
+        list.add("Reddy");
+        Optional<LinkedList<String>> optionalLinkedList=Optional.of(list);
+        System.out.println(optionalString);
+        System.out.println(optionalInteger);
+        System.out.println(optionalDouble);
+        System.out.println(optionalCharacter);
+        System.out.println(optionalBoolean);
+        System.out.println(optionalLinkedList);
+    }
+}
