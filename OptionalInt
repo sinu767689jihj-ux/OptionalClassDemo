@@ -1,0 +1,27 @@
+import java.util.OptionalInt;
+
+public class OptionalClass2 {
+
+    public OptionalInt getOptionalInt() {
+        int value = 54;
+        Integer i = 9;
+
+        /* Integer class wraps a value of primitive type int in an object */
+
+        if (value == Integer.MIN_VALUE) {
+            return OptionalInt.empty();
+        }
+        return OptionalInt.of(value);
+    }
+
+    public static void main(String[] args) {
+        OptionalClass2 obj = new OptionalClass2();
+        OptionalInt result = obj.getOptionalInt();
+
+        if (result.isPresent()) {
+            System.out.println("Value is : " + result.getAsInt());
+        } else {
+            System.out.println("Value is not present");
+        }
+    }
+}
