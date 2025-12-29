@@ -1,0 +1,25 @@
+import java.util.Optional;
+public class OptionalClass1 {
+    public Optional<Double> getdisplay()
+    {
+        double value=53.3;
+        //check if value is NaN
+        //isNaN():Returns true if the Number is a non-a-number,false otherwise
+        //if the value is NaN,return Optional.empty()
+        //Syntax:boolean Double.isNaN(double value)
+        if(Double.isNaN(value)){
+        return Optional.empty();
+        }
+        return Optional.of(value);
+    }
+    public static void main(String[] args)
+    {
+        OptionalClass1 obj=new OptionalClass1();
+        Optional<Double> result=obj.getdisplay();
+        if(result.isPresent())
+        {
+            System.out.println("Value is:"+result.get());
+        }
+    }
+
+}
